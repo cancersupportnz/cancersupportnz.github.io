@@ -343,6 +343,12 @@ a {
     font-family: var(--sans-serif);
     text-align: center;
 }
+@media screen and (max-width: 1600px) {
+    #nav {
+        width: calc(100% - 16rem);
+        padding: 1.6rem 8rem;
+    }
+}
 @media screen and (min-width: 1001px) {
     .mobile-navbar-links {
         opacity: 0;
@@ -357,8 +363,8 @@ a {
         font-size: 56.25%;
     }
     #nav {
-        width: calc(100% - 16rem);
-        padding: 2rem 8rem;
+        width: calc(100% - 12rem);
+        padding: 1.6rem 6rem;
     }
     #nav-links {
         display: none;
@@ -389,8 +395,8 @@ a {
         font-size: 50%;
     }
     #nav {
-        width: calc(100% - 6rem);
-        padding: 2rem 3rem;
+        width: calc(100% - 4rem);
+        padding: 1.6rem 2rem;
     }
 }
 @media screen and (max-width: 300px) {
