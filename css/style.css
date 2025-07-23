@@ -185,6 +185,7 @@ a {
     width: 8rem;
     height: 8rem;
     z-index: 100;
+    margin-left: 0;
 }
 #nav-links {
     height: auto;
@@ -230,6 +231,7 @@ a {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-between;
+    margin: auto 0;
 }
 .line {
     height: 3px;
@@ -378,6 +380,12 @@ a {
     .nav-links-menu-closed {
         opacity: 1;
     }
+    #footer-links {
+        flex-direction: column;
+    }
+    #footer-links a {
+        margin-bottom: 1rem;
+    }
 }
 @media screen and (max-width: 768px) {
     .project-grid, .team-grid {
@@ -478,10 +486,13 @@ a {
     color: var(--gray);
 }
 #projects {
+    background-color: #fff1f7;
+}
+#projects, #events {
     padding: 5rem 0;
     text-align: center;
 }
-#projects h1 {
+#projects h1, #events h1 {
     font-size: 3.6rem;
     color: var(--main-color);
     padding-left: 2rem;
@@ -522,6 +533,41 @@ a {
 .project-card p {
     font-size: 2rem;
 }
+
+.event-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+.event-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 80%;
+}
+.event-card:hover {
+    transform: translateY(-10px);
+}
+.event-card img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.event-card h2 {
+    margin: 2rem 0;
+    color: var(--main-color);
+    font-size: 3rem;
+}
+.event-card p {
+    font-size: 2rem;
+}
 #qr {
     height: 30rem;
 }
@@ -530,4 +576,43 @@ a {
 }
 .button_link button_donate {
     background-color: var(--main-color);
+}
+#language-button {
+    font-family: var(--sans-serif);
+    font-size: 2rem;
+    margin: auto 0 auto 2rem;
+}
+.dropbtn {
+    color: var(--main-color);
+    font-size: 16px;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--main-color);
+}
+.dropbtn:hover, .dropbtn:focus {
+    background-color: var(--link-active);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    font-size: 1.8rem;
+    color: var(--link-active);
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #d0d0d0;}
+.show {display:block;}
+#language-button {
+    right: 0;
 }
