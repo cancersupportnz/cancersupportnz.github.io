@@ -681,6 +681,9 @@ a {
     .content {
         margin-top: 8rem;
     }
+    .carousel {
+        height: 250px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -692,6 +695,9 @@ a {
         width: calc(100% - 4rem);
         padding: 1.6rem 2rem;
     }
+    .carousel {
+        height: 200px;
+    }
 }
 
 @media screen and (max-width: 300px) {
@@ -701,5 +707,8 @@ a {
 
     .nav-link-menu-closed {
         font-size: 3.6rem;
+    }
+    .carousel {
+        height: 150px;
     }
 }
